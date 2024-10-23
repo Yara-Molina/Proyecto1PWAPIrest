@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Actualizar Usuario</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.nombre">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Edad</mat-label>
+    <input matInput [(ngModel)]="data.edad" type="number">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onUpdate()">Actualizar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</mat-dialog-actions>

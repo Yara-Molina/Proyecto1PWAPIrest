@@ -1,0 +1,23 @@
+<div class="busqueda-container">
+    <h2>Buscar Usuario por ID</h2>
+    <form (ngSubmit)="buscarUsuarioPorId()">
+      <mat-form-field appearance="fill">
+        <mat-label>ID del Usuario</mat-label>
+        <input matInput type="number" [(ngModel)]="usuarioId" name="usuarioId" required />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Buscar</button>
+    </form>
+  
+    <div *ngIf="usuarioEncontrado">
+      <h3>Usuario Encontrado:</h3>
+      <p>ID: {{ usuarioEncontrado.id }}</p>
+      <p>Nombre: {{ usuarioEncontrado.nombre }}</p>
+      <p>Email: {{ usuarioEncontrado.email }}</p>
+      <p>Edad: {{ usuarioEncontrado.edad }}</p>
+    </div>
+  
+    <div *ngIf="error">
+      <p>{{ error }}</p>
+    </div>
+  </div>
+  

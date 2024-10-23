@@ -1,18 +1,16 @@
-import { RouterModule, Routes } from '@angular/router';
-import { UsuariosComponent } from './usuarios/usuarios.component';
-import { UsuarioBusquedaComponent } from './components/usuario-busqueda/usuario-busqueda.component';
+// app-routing.module.ts
 import { NgModule } from '@angular/core';
-import { Router } from 'express';
-
-export const routes: Routes = [
+import { RouterModule, Routes } from '@angular/router';
+import { UsuarioBusquedaComponent } from './components/usuario-busqueda/usuario-busqueda.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: UsuariosComponent },
   { path: 'busqueda', component: UsuarioBusquedaComponent }
 ];
 
 @NgModule({
-  imports:[RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
-export class appRoutes{}
+export class AppRoutingModule { }
